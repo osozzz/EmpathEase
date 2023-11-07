@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>EmpathEase: Conversaciones que duran, momentos que importan</title>
+  <link rel="icon" href="{% static 'media/WebEmpathEase.ico' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="{% static 'Styles/styles.css' %}">
+</head>
+
+<body>
+  <header id="myHeader" class="">
+    <img id="logo" src="{% static 'media/IconEmpathEaseWOBG.png' %}" alt="EmpathEase" style="width: 200px; height: auto;">
+    <nav>
+      <a href="#vision">Vision</a>
+      <a href="#chatEase">ChatEase</a>
+      <a href="#health">Mental Health</a>
+      <a href="#journey">Journey</a>
+      <button id="openmenu">
+        <span></span>
+        <span></span>
+        <span class="visually-hidden">Open Menu</span>
+      </button>
+    </nav>
+  </header>
+  <div id="page" class="">
+    <section id="vision"
+      style="background-image:url({% static 'media/visionBG.jpeg' %});background-repeat: no-repeat;object-fit: cover;background-size: cover;">
+      <h1>Vision.</h1>
+    </section>
+    <section id="chatEase"
+      style="background-image:url({% static 'media/chatEaseBG.jpeg' %});background-repeat: no-repeat;object-fit: cover;background-size: cover;">
+      <h1>ChatEase.</h1>
+    </section>
+    <section id="health"
+      style="background-image:url({% static 'media/healthBG.jpg' %}); background-repeat: no-repeat; object-fit: cover; background-size: cover;">
+      <h1>Mental Health.</h1>
+    </section>
+    <section id="journey"
+      style="background-image:url({% static 'media/journeyBG.jpeg' %});background-repeat: no-repeat;object-fit: cover;background-size: cover;">
+      <h1>Journey.</h1>
+    </section>
+  </div>
+  <script src="{% static 'Scripts/script.js' %}"></script>
+</body>
+</html>
