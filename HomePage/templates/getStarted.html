@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>EmpathEase: Conversaciones que duran, momentos que importan</title>
+  <title>EmpathEase: Conversations that last, moments that matter</title>
   <link rel="icon" href="{% static 'media/WebEmpathEase.ico' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="{% static 'Styles/styles.css' %}">
@@ -16,7 +16,7 @@
     <nav>
       <a href="#vision">Vision</a>
       <a href="#chatEase">ChatEase</a>
-      <a href="#health">Mental Health</a>
+      <a href="#health">WellBeing</a>
       <a href="#journey">Journey</a>
       <button id="openmenu">
         <span></span>
@@ -36,13 +36,62 @@
     </section>
     <section id="health"
       style="background-image:url({% static 'media/healthBG.jpg' %}); background-repeat: no-repeat; object-fit: cover; background-size: cover;">
-      <h1>Mental Health.</h1>
+      <h1>WellBeing.</h1>
     </section>
     <section id="journey"
       style="background-image:url({% static 'media/journeyBG.jpeg' %});background-repeat: no-repeat;object-fit: cover;background-size: cover;">
       <h1>Journey.</h1>
     </section>
   </div>
+  <footer id="footer" class="section-footer">
+    <div class="footer">
+      <div class="footer-flex">
+        <div class="footer-col">
+          <a href="/" aria-current="page" class="logo-link w-inline-block w--current">
+            <img src="{% static 'media/Horizontal-Icon-EmpathEasepx.png' %}" loading="lazy" alt="EmpathEase logo" class="logo">
+          </a>
+          <div class="footer-tagline">Conversaciones que duran, momentos que importan.</div>
+          <a href="/login" class="button-primary w-inline-block">
+            <div class="button-text">Join ChatEase</div>
+          </a>
+        </div>
+        <div class="footer-col-2">
+          <div class="footer-heading">Products</div>
+          <a href="http://localhost:8080/routines" class="footer-link">Routines</a>
+          <a href="http://localhost:8080/traker" class="footer-link">Data Tracker</a>
+          <a href="http://localhost:8080/chatEase" class="footer-link">Chatbot</a>
+          <a href="http://localhost:8080/EmpathPet" class="footer-link">EmpathPet</a>
+        </div>
+        <div class="footer-col-2">
+          <div class="footer-heading">Company</div>
+          <a href="http://localhost:8080/about" class="footer-link">About</a>
+          <a href="http://localhost:8080/careers" class="footer-link">Careers</a>
+          <a href="http://localhost:8080/osozk" class="footer-link">Blog</a>
+          <a href="http://localhost:8080/contact" class="footer-link">Contact</a>
+        </div>
+        <div class="footer-col-2 last">
+          <div class="footer-heading">Legal</div>
+          <a href="http://localhost:8080/privacy" class="footer-link">Privacy</a>
+          <a href="http://localhost:8080/terms" class="footer-link">Terms</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-year">©2023 EmpathEase Alejandro Osorno, Inc.</div>
+        <div class="footer-socials-flex">
+          <a href="https://twitter.com/osozszzz" class="social-icon-link w-inline-block">
+            <img src="{% static 'media/X-Icon.svg' %}" loading="lazy" alt="Twitter logo" class="social-icon">
+          </a>
+          <a href="https://github.com/osozzz" class="social-icon-link w-inline-block">
+            <img src="{% static 'media/Github-Icon.svg' %}" loading="lazy" alt="git logo" class="social-icon">
+          </a>
+          <a href="https://www.linkedin.com/in/juanosornodev2602/" class="social-icon-link w-inline-block">
+            <img src="{% static 'media/Lkdn-Icon.svg' %}" loading="lazy" alt="linkedin logo" class="social-icon">
+          </a>
+          <a href="https://www.instagram.com/osozsz.00/" class="social-icon-link w-inline-block">
+            <img src="https://uploads-ssl.webflow.com/6408bea3de5aef58b7e197d4/646d1f0026c4941c3a789671_instagram-icon.svg" loading="lazy" alt="Instagram logo" class="social-icon">
+          </a>
+        </div>
+      </footer>
   <script src="{% static 'Scripts/script.js' %}"></script>
 </body>
 </html>
