@@ -4,14 +4,33 @@
 <head>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>ChatEase: Talk your feelings</title>
-  <link rel="icon" href="{% static 'media/WebEmpathEase.ico' %}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<title>ChatEase: Talk your feelings</title>
+	<link rel="icon" href="{% static 'media/WebEmpathEase.ico' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="stylesheet" href="{% static 'Styles/styles.css' %}">
+	<link rel="stylesheet" href="{% static 'Styles/stylesChat.css' %}">
 </head>
 
 <body>
+	<header class="nav">
+		<a href="/" aria-current="page" class="logo-link w-inline-block w--current">
+			<img src="{% static 'media/Horizontal-Icon-EmpathEasepx.png' %}" loading="eager" alt="empathEase logo" class="logo">
+		</a>
+		<div class="nav-list">
+			<a href="/motivation" class="nav-item">Motivation</a>
+			<a href="/journey" class="nav-item">Journey</a>
+			<a href="/diary" class="nav-item">Diary</a>
+			<a href="/communities" class="nav-item">Communities</a>
+		</div>
+		<div class="nav-buttons">
+			<a href="/profile" class="button-primary w-inline-block">
+				<div class="button-text">Profile</div>
+			<a href="/settings" class="button-primary w-inline-block">
+				<div class="button-text">Settings</div>
+			</a>
+		</div>
+	</header>
+
 	<!-- Chats container -->
 	<div class="chat-container">
 		{% if user.is_authenticated %}
@@ -39,7 +58,7 @@
 					</div>
 				</li>
 				<!--{% endif %}
-    	{% endfor %}-->
+	{% endfor %}-->
 		</ul>				
 	</div>
 	
@@ -58,6 +77,6 @@
 		</form>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-	<script src="{% static 'Scripts/scripts.js' %}"></script>
+	<script src="{% static 'Scripts/scriptChat.js' %}"></script>
 </body>
 </html>
