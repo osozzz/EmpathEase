@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Welcome to EmpathEase. Let's Make Memories Together</title>
+	<link rel="icon" href="{% static 'media/WebEmpathEase.ico' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="{% static 'Styles/stylesRegister.css' %}">
+</head>
+
+<body>
+	<header class="nav">
+		<a href="/" aria-current="page" class="logo-link w-inline-block w--current">
+			<img src="{% static 'media/Horizontal-Icon-EmpathEasepx.png' %}" loading="eager" alt="empathEase logo" class="logo">
+		</a>
+		<div class="nav-list">
+			<a href="/about" class="nav-item">About</a>
+			<a href="/api" class="nav-item">API</a>
+			<a href="/contact" class="nav-item">Contact</a>
+			<a href="/help" class="nav-item">Help</a>
+		</div>
+		<div class="nav-buttons">
+			<a href="/login" class="button-primary w-inline-block">
+				<div class="button-text">Log In</div>
+			</a>
+		</div>
+	</header>
+
+	<main>
+		<div class="box">
+			<div class="inner-box">
+				<div class="forms-wrap">
+					<form autocomplete="off" class="sign-up-form" method="post">
+						{% csrf_token %}
+						<div class="logo">
+							<img src="{% static 'media\IconEmpathEaseWOBG.png' %}" alt="EmpathEase" />
+							<h4>EmpathEase</h4>
+						</div>
+
+						<div class="heading">
+							<h2>Get Started</h2>
+							<h6>Already have an account?</h6>
+							<a href="/login" class="toggle">Sign in</a>
+						</div>
+
+						<div class="actual-form">
+							<div class="input-wrap">
+								<input
+									type="text"
+									class="input-field"
+									id="username"
+									name="username"
+									minlength="4"
+									autocomplete="off"
+									required
+								/>
+								<label for="username">Name</label>
+							</div>
+
+							<div class="input-wrap">
+								<input
+									type="email"
+									id="email"
+									name="email"
+									class="input-field"
+									autocomplete="off"
+									required
+								/>
+								<label for="email">Email</label>
+							</div>
+
+							<div class="input-wrap">
+								<input
+									type="password"
+									id="password"
+									name="password"
+									minlength="4"
+									class="input-field"
+									autocomplete="off"
+									required
+								/>
+								<label for="password">Password</label>
+							</div>
+
+							<input type="submit" value="Sign Up" class="sign-btn" />
+
+							<p class="text">
+								By signing up, I agree to the
+								<a href="#">Terms of Services</a> and
+								<a href="#">Privacy Policy</a>
+							</p>
+						</div>
+					</form>
+				</div>
+
+				<div class="carousel">
+					<div class="images-wrapper">
+						<img src="{% static 'media\Communitie.jpg' %}" class="image img-1 show" alt="" />
+						<img src="{% static 'media\Chatbot.jpg' %}" class="image img-2" alt="" />
+						<img src="{% static 'media\Diary.jpg' %}" class="image img-3" alt="" />
+					</div>
+
+					<div class="text-slider">
+						<div class="text-wrap">
+							<div class="text-group">
+								<h2>Join worldwide communities</h2>
+								<h2>Your own ChatEase</h2>
+								<h2>Keep track of your progress</h2>
+							</div>
+						</div>
+
+						<div class="bullets">
+							<span class="active" data-value="1"></span>
+							<span data-value="2"></span>
+							<span data-value="3"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+	<script src="{% static 'Scripts/scriptRegister.js' %}"></script>
+</body>
+</html>

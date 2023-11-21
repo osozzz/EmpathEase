@@ -78,3 +78,17 @@ deleteButton.addEventListener("click", () => {
 });
 
 loadDataFromLocalstorage();
+
+function toggleProfileMenu() {
+    var profileMenu = document.getElementById("profileMenu");
+    profileMenu.style.display = (profileMenu.style.display === "block") ? "none" : "block";
+}
+
+// Cierra el menú si se hace clic fuera de él
+document.addEventListener("click", function (event) {
+    var profileButton = document.querySelector(".profile-button");
+    var profileMenu = document.getElementById("profileMenu");
+    if (!profileButton.contains(event.target) && !profileMenu.contains(event.target)) {
+        profileMenu.style.display = "none";
+    }
+});

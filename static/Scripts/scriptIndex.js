@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   window.addEventListener('scroll', function() {
 		page.classList.remove('menuopen');
-      if (window.scrollY >= 100) {
+    	if (window.scrollY >= 100) {
         header.classList.add('sticky');
       } else {
         header.classList.remove('sticky');

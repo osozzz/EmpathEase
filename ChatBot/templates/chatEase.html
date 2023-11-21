@@ -23,8 +23,18 @@
 			<a href="/communities" class="nav-item">Communities</a>
 		</div>
 		<div class="nav-buttons">
-			<a href="/profile" class="button-primary w-inline-block">
+			<div class="button-primary w-inline-block profile-button" onclick="toggleProfileMenu()">
 				<div class="button-text">Profile</div>
+				<div class="profile-menu" id="profileMenu">
+					{% if user.is_authenticated %}
+					<a href="/profile">View Profile</a>
+					<a href="/logout">Log Out</a>
+					{% else %}
+					<a href="/login">Log In</a>
+					<a href="/register">Register</a>
+					{% endif %}
+				</div>
+			</div>
 			<a href="/settings" class="button-primary w-inline-block">
 				<div class="button-text">Settings</div>
 			</a>
@@ -38,27 +48,36 @@
 			<div class="chat-content">
 				<div class="chat-details">
 					<img src="{% static 'media/HeartEmpathEaseWOBG.png' %}" alt="Ease">
-					<p>Welcome, {{user.username}}</p>
+					<p>Welcome, {{user.username}}, how can i help you today?</p>
 				</div>
 				<span class="material-symbols-rounded">content_copy</span>
 			</div>
 		</div>
 		{% endif %}
 		<ul class="list-unstyled messages-list">
-			<!--{% for chat in chats %}
-				{% if chat.user == request.user %}-->
-				<li class="message sent">
-					<div class="chat outgoing">
-						<div class="chat-content">
-							<div class="chat-details">
-								<img src="{% static 'media/Killua-Example.jpg' %}" alt="You">
-								<p>{{chat.message}}</p>
+			{% for chat in chats %}
+				{% if chat.user == request.user %}
+					<li class="message sent">
+						<div class="chat outgoing">
+							<div class="chat-content">
+								<div class="chat-details">
+									<img src="{% static 'media/Killua-Example.jpg' %}" alt="You">
+									<p>{{chat.message}}</p>
+								</div>
 							</div>
 						</div>
-					</div>
-				</li>
-				<!--{% endif %}
-	{% endfor %}-->
+						
+						<div class="chat incoming">
+							<div class="chat-content">
+								<div class="chat-details">
+									<img src="{% static 'media/HeartEmpathEaseWOBG.png' %}" alt="Ease">
+									<p>{{chat.response}}</p>
+								</div>
+							</div>
+						</div>
+					</li>
+				{% endif %}
+			{% endfor %}
 		</ul>				
 	</div>
 	
