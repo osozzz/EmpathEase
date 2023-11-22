@@ -412,3 +412,25 @@ a {
   background: var(--icon-hover-bg);
 }
 
+.settings-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Agrega esta línea para desplazar el menú hacia abajo */
+  background-color: var(--incoming-chat-bg); /* Cambia el color de fondo según tu diseño */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 125px;
+  border: 1px solid rgba(6, 240, 146, 0.3);
+  border-radius: 12px;
+}
+
+.settings-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--text-color); /* Cambia el color del texto según tu diseño */
+}
+
+.settings-menu a:hover {
+  background-color: rgba(10, 237, 184, 0.232); /* Cambia el color de fondo al pasar el mouse según tu diseño */
+}
+

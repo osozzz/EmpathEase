@@ -13,7 +13,6 @@ Palm.configure(api_key=settings.PAML_API_KEY)
 # Create your views here.
 def chatBot(request):
     chats = Chat.objects.filter(user=request.user)
-    
     if request.method == 'POST':
         message = request.POST.get('message')
         response = ask_bard(message)

@@ -35,9 +35,13 @@
 					{% endif %}
 				</div>
 			</div>
-			<a href="/settings" class="button-primary w-inline-block">
+			<div class="button-primary w-inline-block settings-button" onclick="toggleSettingsMenu()">
 				<div class="button-text">Settings</div>
-			</a>
+				<div class="settings-menu" id="settingsMenu">
+					<a href="/help">Help</a>
+					<a href="/feedback">FeedBack</a>
+				</div>
+			</div>
 		</div>
 	</header>
 

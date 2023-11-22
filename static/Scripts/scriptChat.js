@@ -92,3 +92,17 @@ document.addEventListener("click", function (event) {
         profileMenu.style.display = "none";
     }
 });
+
+function toggleSettingsMenu() {
+    var settingsMenu = document.getElementById("settingsMenu");
+    settingsMenu.style.display = (settingsMenu.style.display === "block") ? "none" : "block";
+}
+
+// Cierra el menú si se hace clic fuera de él
+document.addEventListener("click", function (event) {
+    var settingsButton = document.querySelector(".settings-button");
+    var settingsMenu = document.getElementById("settingsMenu");
+    if (!settingsButton.contains(event.target) && !settingsMenu.contains(event.target)) {
+        settingsMenu.style.display = "none";
+    }
+});

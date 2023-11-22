@@ -41,6 +41,7 @@ section:after {
   opacity: 0.5;
   height: 100%;
   width: 100%;
+  z-index: 0;
 }
 section h1 {
   font-size: 120px;
@@ -304,4 +305,262 @@ img {
 .social-icon {
     width: 24px;
     height: 24px;
+}
+
+.vision-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.get-started-button {
+  margin-top: 40px;
+  z-index: 2;
+}
+
+.button-container {
+  display: inline-block; /* Ajusta la visualización del contenedor del botón */
+  z-index: 2;
+}
+
+.get-started-button a {
+  display: block; /* Ajusta el enlace para que ocupe todo el ancho del contenedor */
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #1f603f;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  z-index: 2;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.get-started-button a:hover {
+  background-color: #1f603f;
+  color: #fff;
+}
+
+#journey {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  max-height: 100vh;
+  column-gap: 3rem;
+  padding-block: min(20vh, 3rem);
+  background-color: rgb(96, 216, 172);
+  z-index: 2;
+}
+
+.bg {
+  position: fixed;
+  top: -4rem;
+  left: -12rem;
+  z-index: -1;
+  opacity: 0;
+}
+
+.bg2 {
+  position: fixed;
+  bottom: -2rem;
+  right: -3rem;
+  z-index: -1;
+  width: 9.375rem;
+  opacity: 0;
+}
+
+#journey div{
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 65vh;
+  padding-block: min(20vh, 3rem);
+}
+
+#journey div a {
+  font-weight: 500;
+  margin: 0;
+  z-index: 2;
+  position: relative;
+}
+
+#journey div span {
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  margin: 0;
+  z-index: 2;
+  position: relative;
+}
+
+#journey div span {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+#journey div h1 {
+  text-transform: capitalize;
+  letter-spacing: 0.8px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: clamp(3.4375rem, 3.25rem + 0.75vw, 4rem);
+  background-color: #09c28e;
+  background-image: linear-gradient(45deg, #3ae2ad, #426657);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+#journey div hr {
+  display: block;
+  background: #00aa88;
+  height: 0.25rem;
+  width: 6.25rem;
+  border: none;
+  margin: 1.125rem 0 1.875rem 0;
+}
+
+#journey div hr {
+  margin: 0;
+  z-index: 2;
+  position: relative;
+}
+
+#journey div p {
+  line-height: 1.6;
+}
+
+#journey div p {
+  line-height: 1.6;
+  margin: 15px 0;
+  z-index: 2;
+  position: relative;
+  max-width: 500px;
+}
+
+#journey a {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 500;
+  background: rgba(255,255,255,.08);
+  border-radius: 3.125rem;
+  transition: 0.3s ease-in-out;
+}
+
+#journey div a {
+  border: 2px solid #c2c2c2;
+  margin-top: 10px;
+  padding: 0.625rem 1.875rem;
+}
+
+#journey div a:hover {
+  border: 0.125rem solid #00aa77;
+  color: #00aa6f;
+}
+
+#journey .swiper{
+  width: 100%;
+  max-height: 700px;
+  padding-top: 50px;
+}
+
+#journey .swiper-pagination-bullet,
+#journey .swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+#journey .swiper-pagination {
+  bottom: 4.25rem !important;
+}
+
+#journey .swiper-slide {
+  width: 10.75rem;
+  height: 28.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: self-start;
+}
+
+#journey .swiper-slide h2 {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  margin-bottom: 0.625rem;
+  padding: 0 0 0 1.563rem;
+  text-transform: uppercase;
+}
+
+#journey .swiper-slide p {
+  color: #dadada;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  padding: 0 1.563rem;
+  line-height: 1.6;
+  font-size: 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+#journey .swiper-slide div {
+  display: none;
+  opacity: 0;
+  padding-bottom: 0.625rem;
+}
+
+#journey .swiper-slide-active div {
+  display: block;
+  opacity: 1;
+}
+
+#journey .swiper-slide--one {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("https://imgur.com/D1sYiJ8.jpg") no-repeat 50% 50%/cover;
+}
+
+#journey .swiper-slide--two {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("https://imgur.com/k2zQbFl.jpg") no-repeat 50% 50%/cover;
+}
+
+#journey .swiper-slide--three {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("https://imgur.com/LXluJT9.jpg") no-repeat 50% 50%/cover;
+}
+
+#journey .swiper-slide--four {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("https://imgur.com/HKrzeVT.jpg") no-repeat 50% 50%/cover;
+}
+
+#journey .swiper-slide--five {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("https://imgur.com/zYJuPfx.jpg") no-repeat 50% 50%/cover;
+}
+
+#journey .swiper-3d .swiper-slide-shadow-left,
+#journey .swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+
+@media screen and (min-width: 48rem) {
+  #journey {
+    display: flex;
+    align-items: center;
+  }
+
+  .bg,
+.bg2 {
+    opacity: 0.1;
+  }
+}
+@media screen and (min-width: 93.75rem) {
+  .swiper {
+    width: 85%;
+  }
 }

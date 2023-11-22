@@ -22,4 +22,5 @@ urlpatterns = [
     path("", include("HomePage.urls")),
     path("", include("ChatBot.urls")),
     path("", include("Authentication.urls")),
+    path("", include("FeedBack.urls"))
 ]

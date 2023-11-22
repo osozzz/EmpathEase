@@ -8,6 +8,7 @@
   <link rel="icon" href="{% static 'media/WebEmpathEase.ico' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="{% static 'Styles/stylesIndex.css' %}">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
 </head>
 
 <body>
@@ -25,24 +26,80 @@
       </button>
     </nav>
   </header>
+
   <div id="page" class="">
+
     <section id="vision"
       style="background-image:url({% static 'media/visionBG.jpeg' %});background-repeat: no-repeat;object-fit: cover;background-size: cover;">
-      <h1>Vision.</h1>
+      <div class="vision-content">
+        <h1>Vision.</h1>
+        <div class="get-started-button">
+          <div class="button-container">
+            <a href="/login">Get Started</a>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <section id="journey" style="background-image:url({% static 'media/chatEaseBG.jpeg' %});background-repeat: no-repeat;object-fit: contain;background-size: cover;">
+      <div>
+        <span>discover</span>
+        <h1>Explore your</h1>
+        <h1>own Journey</h1>
+        <hr>
+        <p>Discover plenty of interactions and customization inside our webapp that will make your experience totally about you.</p>
+        <a href="/register">Start your History</a>
+      </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-slide--one">
+            <div>
+              <h2>Diary</h2>
+              <p>Write down your feelings to start keeping track and care of yourself.</p>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide--two">
+            <div>
+              <h2>Mood Tracker</h2>
+              <p>Pick your daily emotions to figure out which way you feel the most in your life.</p>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide--three">
+            <div>
+              <h2>Reports</h2>
+              <p>View complete reports of the data we collect and recive customized reviews.</p>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide--four">
+            <div>
+              <h2>Profile</h2>
+              <p>Customize your profile to make your experience full of your preferences.</p>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide--five">
+            <div>
+              <h2>Aspect</h2>
+              <p>Join ton of diferents communities that will make you feel better with advices and historys.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
     <section id="chatEase"
-      style="background-image:url({% static 'media/chatEaseBG.jpeg' %});background-repeat: no-repeat;object-fit: cover;background-size: cover;">
+      style="background-image:url({% static 'media/journeyBG.jpeg' %});background-repeat: no-repeat;object-fit: cover;background-size: cover;">
       <h1>ChatEase.</h1>
     </section>
+
     <section id="health"
-      style="background-image:url({% static 'media/healthBG.jpg' %}); background-repeat: no-repeat; object-fit: cover; background-size: cover;">
-      <h1>WellBeing.</h1>
+      style="background-image:url({% static 'media/healthBG.jpg' %});background-repeat: no-repeat;object-fit: cover;background-size: cover;">
+      <h1>Health.</h1>
     </section>
-    <section id="journey"
-      style="background-image:url({% static 'media/journeyBG.jpeg' %});background-repeat: no-repeat;object-fit: cover;background-size: cover;">
-      <h1>Journey.</h1>
-    </section>
+
   </div>
+
   <footer id="footer" class="section-footer">
     <div class="footer">
       <div class="footer-flex">
@@ -50,7 +107,7 @@
           <a href="/" aria-current="page" class="logo-link w-inline-block w--current">
             <img src="{% static 'media/Horizontal-Icon-EmpathEasepx.png' %}" loading="lazy" alt="EmpathEase logo" class="logo">
           </a>
-          <div class="footer-tagline">Conversaciones que duran, momentos que importan.</div>
+          <div class="footer-tagline">Conversations that last, moments that matter.</div>
           <a href="/login" class="button-primary w-inline-block">
             <div class="button-text">Join ChatEase</div>
           </a>
@@ -91,7 +148,11 @@
             <img src="https://uploads-ssl.webflow.com/6408bea3de5aef58b7e197d4/646d1f0026c4941c3a789671_instagram-icon.svg" loading="lazy" alt="Instagram logo" class="social-icon">
           </a>
         </div>
-      </footer>
+      </div>
+    </div>
+  </footer>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
   <script src="{% static 'Scripts/scriptIndex.js' %}"></script>
 </body>
 </html>

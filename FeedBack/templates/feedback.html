@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Tell us what to improve</title>
+	<link rel="icon" href="{% static 'media/WebEmpathEase.ico' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="{% static 'Styles/stylesFeedback.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+	<header class="nav">
+		<a href="/" aria-current="page" class="logo-link w-inline-block w--current">
+			<img src="{% static 'media/Horizontal-Icon-EmpathEasepx.png' %}" loading="eager" alt="empathEase logo" class="logo">
+		</a>
+		<div class="nav-list">
+			<a href="/about" class="nav-item">About</a>
+			<a href="/api" class="nav-item">API</a>
+			<a href="/contact" class="nav-item">Contact</a>
+			<a href="/help" class="nav-item">Help</a>
+		</div>
+		<div class="nav-buttons">
+			<a href="/chatEase" class="button-primary w-inline-block">
+				<div class="button-text">ChatEase</div>
+			</a>
+		</div>
+	</header>
+
+	<div class="container">
+		<form action="." method="post">
+			{% csrf_token %}
+			<div class="input-group mb-3">
+				<span class="input-group-text" id="basic-addon1">@</span>
+				<input name="name" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
+			</div>
+			<div class="mb-3">
+				<label for="exampleInputEmail1" class="form-label">Email address</label>
+				<input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+				<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+			</div>
+			<label for="concerns" class="form-label">Express your concerns</label>
+			<div class="input-group">
+				<textarea name="feedback" class="form-control" aria-label="With textarea" required></textarea>
+			</div>
+			<button type="submit" class="button-primary w-inline-block">Submit</button>
+		</form>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	<script src="{% static 'Scripts/scriptFeedback.js' %}"></script>
+</body>
+</html>
