@@ -21,7 +21,7 @@ python manage.py migrate
 python manage.py runserver localhost:8080
 
 # Lastly
-Go to http://127.0.0.1:8000/main
+Go to localhost:8080
 
 Once you have the app running, you will be able to view the main interfaces of the web app, such as the Home page, Chatbot page and a LogIn/SignIn form, and the feedback page
 
